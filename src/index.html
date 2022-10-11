@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{ "title": "Главная" })
+
+<body>
+  @@include('html/header.html',{ })
+  <main>
+
+    <section class="cost">
+      <div class="container cost__container">
+        <h1 class="visually-hidden">1</h1>
+        <h2 class="cost__header title-reset">Рассчитайте стоимость автомобиля в лизинг</h2>
+        <div class="cost__content">
+          <form class="cost__form">
+            <ul class="cost__list">
+              <li class="cost__list-item">
+                <h3 class="cost__title">Стоимость автомобиля</h3>
+                <div class="cost__inputs">
+                  <label class="cost__label" for="car_coast">
+                    <input type="number" class="cost__input input-js" min="1000000" max="6000000" placeholder="3300000"
+                      id="costCarInput" name="car_coast">
+                    <div class="cost__label-content">
+                      <span class="cost__label-span">₽</span>
+                    </div>
+                  </label>
+                  <input class="cost__slider" id="costCar" type="range" min="1000000" max="6000000" value="3300000"
+                    step="1">
+                </div>
+              </li>
+              <li class="cost__list-item">
+                <h3 class="cost__title">Первоначальный взнос</h3>
+                <div class="cost__inputs">
+                  <label class="cost__label" for="initail_payment">
+                    <input type="number" class="cost__input" min="1" max="6000000" placeholder="420000"
+                      id="contributionCarInput" name="initail_payment">
+                  </label>
+                  <label class="cost__label-content-percent" for="initail_payment_percent">
+                    <input type="number" class="cost__input-percent input-js" min="1" max="100" placeholder="13"
+                      id="percentCarInput" value="13" step="1" name="initail_payment_percent">
+                    <span class="cost__label-span">%</span>
+                  </label>
+                  <input class="cost__slider " id="contributionCar" type="range" min="1" max="100" value="13" step="1">
+                </div>
+              </li>
+              <li class="cost__list-item">
+                <h3 class="cost__title">Срок лизинга</h3>
+                <div class="cost__inputs">
+                  <label class="cost__label" for="lease_term">
+                    <input type="number" class="cost__input input-js" min="1" max="100" placeholder="60"
+                      id="timeCarInput" name="lease_term">
+                    <div class="cost__label-content">
+                      <span class="cost__label-span">мес.</span>
+                    </div>
+                  </label>
+                  <input class="cost__slider " id="timeCar" type="range" min="1" max="100" value="60" step="1">
+                </div>
+              </li>
+              <li class="cost__list-item">
+                <h3 class="cost__title">Сумма договора лизинга</h3>
+                <div class="cost__inputs">
+                  <label class="cost__label cost__label-bottom" for="total_sum">
+                    <input type="number" class="cost__input cost__input-bottom" min="1" max="10000000" placeholder="0"
+                      id="leasingCarInput" name="total_sum">
+                    <div class="cost__label-content cost__label-content-bottom">
+                      <span class="cost__label-span cost__label-span-bottom">₽</span>
+                    </div>
+                  </label>
+                </div>
+              </li>
+              <li class="cost__list-item">
+                <h3 class="cost__title">Ежемесячный платеж от</h3>
+                <div class="cost__inputs">
+                  <label class="cost__label cost__label-bottom" for="monthly_payment_from">
+                    <input type="number" class="cost__input cost__input-bottom" min="1" max="1000000" placeholder="0"
+                      id="paymentCarInput" name="monthly_payment_from">
+                    <div class="cost__label-content cost__label-content-bottom">
+                      <span class="cost__label-span cost__label-span-bottom">₽</span>
+                    </div>
+                  </label>
+                </div>
+              </li>
+              <li class="cost__list-item">
+                <button class="cost__btn content-btn btn-reset" type="submit">Оставить заявку
+                  <svg class="loading-svg">
+                    <use xlink:href="img/icons/icons.svg#loading"></use>
+                  </svg>
+                </button>
+
+              </li>
+            </ul>
+
+          </form>
+
+
+
+
+        </div>
+
+
+      </div>
+    </section>
+
+  </main>
+  @@include('html/footer.html',{ })
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
